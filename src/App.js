@@ -1,4 +1,3 @@
-// import logo from './valetingClubLogo.PNG';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
