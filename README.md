@@ -16,6 +16,12 @@ It looks ugly and that is kind of fine, becuase it is more for structure and lib
 
 Template created
 
+#### 1.0.1
+
+Fixed linting issues
+
+Removed reference to original project
+
 <!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
