@@ -1,5 +1,6 @@
 import { stack as Menu } from 'react-burger-menu'
 import barsSolid from '../images/bars-solid.svg'
+import React from 'react'
 
 function NavBar () {
   return (
