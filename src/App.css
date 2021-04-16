@@ -1,5 +1,15 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 * {
   font-family: 'Roboto', sans-serif;
+  color: #fff
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 .App {
   text-align: center;
@@ -18,11 +28,9 @@
 
 .App-header {
   background-color: #0d74b7;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -52,10 +60,12 @@
   color: #282c34 !important;
 }
 body {
-  background-color: #44a0dc !important;
-  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
-
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -63,7 +73,12 @@ body {
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 1rem;
+}
+
+.right .bm-burger-button {
+  left: initial;
+  right: 36px;
 }
 
 /* Color/shape of burger icon bars */
@@ -85,6 +100,9 @@ body {
 /* Color/shape of close button cross */
 .bm-cross {
   background: #bdc3c7;
+  width: 9px !important;
+  height: 42px !important;
+  right: 10px !important;
 }
 
 /*
@@ -94,11 +112,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  width: 250px !important;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #0d74b7;
+  background: #818181;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -128,4 +147,149 @@ a {
 }
 a:hover {
   color: rgba(255, 255, 255, 0.486) !important
+}
+.menu-item {
+  margin: 1rem;
+  font-size: 24pt;
+}
+.menu-item:hover {
+  transform: scale(1.2);
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s !important;
+}
+#hpContent {
+  background-image: url("./images/hp1.jpg");
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1)90%, rgba(0,0,0,0)98%);
+  background-size: 100%;
+  background-position: 0px 47%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fadeInUp {
+  transform: translateY(-50%);
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.card-text {
+  /* color: #000; */
+}
+.card-img-top {
+  width: 345px !important;
+  height: 255px !important;
+  max-width: 100%;
+  min-width: 255px;
+}
+.footer {
+  background-color: #818181 !important;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+.footer .col {
+  margin: 0;
+  padding: 0 !important;
+}
+.footer .row {
+  margin: 0;
+  padding: 0 !important;
+}
+h3 {
+  color: #3b3b3b
+}
+.card {
+  background-color: #818181 !important;
+}
+#react-burger-cross-btn {
+  left: -35px !important;
+  top: -3px !important;
+  width: 250% !important;
+  height: 250% !important;
+}
+#contact-form label {
+  color: #000000;
+  float: left;
+  font-size: large;
+}
+.imageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24pt !important;
+}
+.cropped {
+  /*width: 150px;*/ /* width of container */
+  /*height: 150px;*/ /* height of container */
+  overflow: hidden;
+}
+.cropped img {
+  margin: -10px 0px 0px -180px;
+}
+.fadeIn {
+  opacity: 1 !important;
+  transition: opacity 250ms !important;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.showElement {
+  display: block;
+  opacity: 0;
+}
+.images {
+  height: 50vh;
+}
+hr {
+  border-top: 1px solid rgb(255 255 255) !important;
 }
